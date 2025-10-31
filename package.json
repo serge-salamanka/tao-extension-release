@@ -1,7 +1,7 @@
 {
   "name": "@serge-taotesting-com/tao-extension-release",
   "version": "2.6.4",
-  "description": "Helps you to release TAO extensions - testing publishing",
+  "description": "Helps you to release TAO extensions",
   "engines": {
     "node": ">=14.0.0"
   },
