@@ -35,6 +35,6 @@ jobs:
           npm i -g
           npm i update-notifier 
           #create tag and release a new version
-          taoRelease npmRelease --no-interactive
+          taoRelease npmRelease --release-branch master --no-interactive
 
           #Release branch will be different for each repository, make necessary changes. 
