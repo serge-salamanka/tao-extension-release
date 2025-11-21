@@ -1,10 +1,21 @@
 name: Release Tao extension
 
 on:
-  pull_request:
-    branches:
-      - develop
-    types: [closed]
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
 
 jobs:
   auto-release:
