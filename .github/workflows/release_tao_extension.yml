@@ -1,10 +1,21 @@
 name: Release Tao extension
 
 on:
-  pull_request:
-    branches:
-      - develop
-    types: [closed]
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
 
 jobs:
   auto-release:
@@ -35,6 +46,6 @@ jobs:
           npm i -g
           npm i update-notifier 
           #create tag and release a new version
-          taoRelease npmRelease --no-interactive
+          taoRelease npmRelease --release-branch master --no-interactive
 
           #Release branch will be different for each repository, make necessary changes. 

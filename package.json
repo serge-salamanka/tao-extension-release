@@ -1,7 +1,7 @@
 {
-  "name": "@oat-sa/tao-extension-release",
-  "version": "2.6.4",
-  "description": "Helps you to release TAO extensions - testing publishing on PR",
+  "name": "tao-extension-release",
+  "version": "2.6.5",
+  "description": "Helps you to release TAO extensions",
   "engines": {
     "node": ">=14.0.0"
   },
